@@ -151,6 +151,17 @@ namespace FilteredCoffee.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        // GET: Coffee/Brewings/5
+        public async Task<IActionResult> Brewings(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            return RedirectToAction("Index", "Brewing", new { id });
+        }
+
         private bool CoffeeExists(int id)
         {
             return _context.Coffee.Any(e => e.Id == id);
