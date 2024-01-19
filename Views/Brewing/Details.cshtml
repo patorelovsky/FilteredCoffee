@@ -1,0 +1,48 @@
+@model FilteredCoffee.Brewing
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Brewing</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoffeeAmountGrams)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoffeeAmountGrams)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GrinderUsed)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GrinderUsed)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GrindLevelInClicks)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GrindLevelInClicks)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WaterTemperature)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WaterTemperature)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BrewingTime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BrewingTime)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

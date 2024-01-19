@@ -12,4 +12,6 @@ public class ApplicationDbContext : IdentityDbContext
     }
 
 public DbSet<FilteredCoffee.Coffee> Coffee { get; set; } = default!;
+
+public DbSet<FilteredCoffee.Brewing> Brewing { get; set; } = default!;
 }

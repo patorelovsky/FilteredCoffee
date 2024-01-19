@@ -1,0 +1,51 @@
+@model FilteredCoffee.Brewing
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Brewing</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoffeeAmountGrams)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoffeeAmountGrams)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GrinderUsed)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GrinderUsed)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GrindLevelInClicks)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GrindLevelInClicks)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WaterTemperature)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WaterTemperature)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BrewingTime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BrewingTime)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
