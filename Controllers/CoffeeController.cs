@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FilteredCoffee;
 using FilteredCoffee.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FilteredCoffee.Controllers
 {
+    [Authorize]
     public class CoffeeController : Controller
     {
         private readonly ApplicationDbContext _context;
