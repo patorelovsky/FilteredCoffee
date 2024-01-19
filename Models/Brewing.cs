@@ -4,6 +4,8 @@ public class Brewing
 {
     // Unique identifier for each coffee brewing record
     public int Id { get; set; }
+    // Id of the related coffee
+    public int CoffeeId { get; set; }
     // The quantity of coffee used for brewing, measured in grams
     public int CoffeeAmountGrams { get; set; }
     // The type or brand of the coffee grinder used
